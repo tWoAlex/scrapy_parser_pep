@@ -14,7 +14,6 @@ ITEM_PIPELINES = {
 
 BASE_DIR = Path(__file__).parent.parent
 RESULTS_DIR = 'results'
-BASE_DIR.joinpath(RESULTS_DIR).mkdir(exist_ok=True)
 
 FEEDS = {
     f'{RESULTS_DIR}/pep_%(time)s.csv': {

@@ -7,6 +7,7 @@ from pep_parse.settings import BASE_DIR, RESULTS_DIR
 
 class PepParsePipeline:
     def open_spider(self, spider):
+        BASE_DIR.joinpath(RESULTS_DIR).mkdir(exist_ok=True)
         self.status_counters = Counter()
 
     def process_item(self, item, spider):
